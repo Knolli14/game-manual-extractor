@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["dependencies"]
+name = "game_manual_extractor"
+version = "0.1"
+description = "Downloads game manuals from https://en.1jour-1jeu.com/rules/"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["."]
