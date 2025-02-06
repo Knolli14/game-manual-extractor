@@ -5,15 +5,26 @@ class GameInfo:
     ''' Data Class for storing game specific information '''
     link: str
     title: str
+    language: str = 'english'
 
-    def display_info(self) -> None:
+    def _display_info(self) -> None:
         ''' Prints the game title and link '''
 
-        print(
+        return(
             f"Title: {self.title}",
             f"Link: {self.link}",
-            "Language: English", # should be made variable
-            sep="\n"
+            f"Language: {self.language}",
         )
 
-        return None
+    def __str__(self) -> str:
+        return f"{self.title} in {self.language}"
+
+
+    def to_dict(self) -> dict:
+        ''' Returns the game info as a dictionary '''
+
+        return {
+            "title": self.title,
+            "link": self.link,
+            "language": self.language
+        }
