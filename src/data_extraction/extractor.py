@@ -1,5 +1,5 @@
 from src.data import load_json, save_as_json, download_pdf
-from src.soup import get_soup, get_last_page_number, get_game_tags
+from src.data_extraction.soup import get_soup, get_last_page_number, get_game_tags
 from src.utils import get_game_info
 from src.game_info import GameInfo
 
